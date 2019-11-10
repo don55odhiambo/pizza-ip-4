@@ -2,18 +2,41 @@ h1
 {
     text-align: center;
     font-style: oblique;
-    color: black
+    color:red
 }
 p
 {
     text-align:center;
-    color:black;
+    color:blue;
+}
+h2
+{
+    text-align: center;
+    color: white;
+
 }
 body{
     
     background-size: cover;
     background-repeat: no-repeat;
-    background-image: url(images/pizza-neon-light-signage-1596888.jpg);
+    background-image: url(images/photo-of-pizza-1788852.jpg);
+    enable-background: inherit; 
 }
-
+h3
+{
+    text-align: center;
+    color: white;
+    font-style: initial;
     
+} 
+h4
+{
+    text-align: center;
+    color: springgreen;
+}
+li
+{
+    text-align: center;
+    color: ivory;
+    list-style-type: lower-roman;
+}
