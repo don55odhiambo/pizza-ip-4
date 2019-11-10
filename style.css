@@ -39,4 +39,6 @@ li
     text-align: center;
     color: ivory;
     list-style-type: lower-roman;
+    place-items: center;
 }
+
