@@ -1,13 +1,13 @@
 # PIZZA MANIA
 This is a pizza ordering web application where the customers can order their pizzas according to their differnce in size and also toppings.
 ### livelink:
-### screenshot
+### screenshot:
 
 
 ### BDD
 - someone should be able to choose the size and toppings of the pizza and a price should equally
 indicate their prizes differently.
-- If a customer orders a pizza delivery ,there should be a alert that indicates that the order will be delivered to the customers station
+- If a customer orders a pizza delivery,there should be a alert that indicates that the order will be delivered to the customers location.
 
 ### setup
 - clone the project .navigate to project folder.open the project with your text editor.

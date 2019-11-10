@@ -10,8 +10,11 @@ p
     color: green;
     text-decoration-line: underline;
 }
-body {
-    background-image: url(/images/don7.jpg);
+body{
+    
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(images/don7.jpg);
 }
 
     
