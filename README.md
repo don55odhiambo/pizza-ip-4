@@ -2,7 +2,8 @@
 This is a pizza ordering web application where the customers can order their pizzas according to their differnce in size and also toppings.
 ### livelink:
 ### screenshot:
-
+<img src="images/don11.png">
+<img src="images/don10.png">
 
 ### BDD
 - someone should be able to choose the size and toppings of the pizza and a price should equally
