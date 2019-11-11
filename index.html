@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>pizza  mania</title>
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
 
     
 </head>
@@ -15,21 +15,28 @@
         <div class="row">
             <div class="col-md-12">
     <h1>WELCOME TO DON'S PIZZA PALACE</h1>
+    <div class="ric1">
     <p>The best pizza you can get at an affordable price.You are all welcomed.<br>Monday-Saturday<br>Openning Hours 8:30am-10:00pm </p>
+    </div>
     <h2>pizza crust categories</h2>
+    <div class="mia1">
     <p>Thick crust</p>
     <ul>
         <li>st.louis pizza</li>
         <li>Detroit pizza</li>
         <li>Greek pizza</li>
     </ul>
+    </div>
+    <div class="mia2">
     <p>Thin crust</p>
     <ul>
         <li>Naepolitan pizza</li>
         <li>Kenyan pizza</li>
         <li>New York style pizza</li>
     </ul>
+    </div>
     <h3>The Toppings</h3>
+    <div class="mia3">
     <p>vegeterian</p>
     <ul>
         <li>pepperoni</li>
@@ -37,6 +44,8 @@
         <li>onions</li>
         <Li>cheese</Li>
     </ul>
+    </div>
+    <div class="mia4">
     <p>non vegeterians</p>
     <ul>
         <li>sausage</li>
@@ -44,23 +53,36 @@
         <li>black olives</li>
         <li>mushrooms</li>
     </ul>
+    </div>
     <h4>kindly fill the form so as to aquire your order successfully</h4>
     <div class="jumbotron">
-        <div class="col-sm-3">
+        <div class="row">
+    
+        </div>
+        <div class="col-md-6">
             <form action="inputs">
+                <div class="mia5">
     <p>click and scroll down for pizza crust</p>
-    <select id="don1">
-
-    <option value="st.louis pizza">st.louis pizza</option>
-    <option value="Detroit pizza">Detroit pizza</option>
-    <option value="Greek pizza">Greek pizza</option>
-    <option value="Naepolitan pizza">Naepolitan pizza</option>
-    <option value="Kenyan pizza">Kenyan pizza</option>
-    <option value="Newyork style pizza">Newyork style pizza</option>
-
-    </select>
-
+    </div>
+</div>
+     <div class="jumbotron">
+       <div class="col-md-6">
+           <select id="don1">
+    
+             <option value="1200">st.louis pizza</option>
+             <option value="750">Detroit pizza</option>
+             <option value="930">Greek pizza</option>
+             <option value="1000">Naepolitan pizza</option>
+             <option value="800">Kenyan pizza</option>
+             <option value="1390">Newyork style pizza</option>
+    
+           </select>
+    
+        </div>
+    </div>
+    <div class="mia6">
     <p>pizza according to sizes</p>
+    </div>
     <select id="don2">
 
     <option value="large">large</option>
@@ -68,12 +90,16 @@
     <option value="small">small</option>
     
     </select>
-
+     
+    <div class="mia7">
     <p>No.of pizza's</p>
+    </div>
     <br>
-    <input type="text" id="mac1" placeholder="number" min="1" max="100">
-
+    <input type="text" id="mac1" placeholder="number">
+    <div class="cbr1">
     <p>Toppings</p>
+    </div>
+
 
     <select id="don3">
     <option value="vegeterian">vegeterian</option>
@@ -84,10 +110,15 @@
     <button type="submit" id="submit">order here</button>
      </form>
 
-     <h5>do you want your pizza to be delivered at your location</h5>
+     <h5>Do you want your pizza to be delivered at your location</h5>
+<div id="radio">
      <form>
-         
-    
+         <input type="radio" name="Yes" value="yes" checked>yes<br>
+         <input type="radio" name="No" value="no">no
+     </form>
+    </div>
+    <br>
+    <button type="button" onclick="alert('your order will be delivered to your location!')">submit</button>
 
     <script src="Js/jquery.js"></script>
     <script src="Js/script.js"></script>
