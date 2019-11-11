@@ -4,11 +4,6 @@ h1
     font-style: oblique;
     color:red
 }
-p
-{
-    text-align:center;
-    color:blue;
-}
 h2
 {
     text-align: center;
@@ -21,6 +16,7 @@ body{
     background-repeat: no-repeat;
     background-image: url(images/photo-of-pizza-1788852.jpg);
     enable-background: inherit; 
+    text-align: center;
 }
 h3
 {
@@ -40,5 +36,53 @@ li
     color: ivory;
     list-style-type: lower-roman;
     place-items: center;
+    list-style: none;
 }
-
+.mia1{
+    color: red;
+    text-align: center;
+}
+.mia2{
+    color:maroon;
+    text-align: center;
+}
+.mia3{
+    text-align: center;
+    color: red
+}
+.mia4{
+    text-align: center;
+    color: black
+}
+.mia5{
+    text-align: center;
+    color: red;
+}
+.mia6{
+    text-align: center;
+    color: brown;
+}
+.mia7{
+    text-align: center;
+    color: orangered;
+}
+.cbr1{
+    text-align: center;
+    color: red;
+}
+.don1 option{
+    text-align: center;
+    margin-left: 100%;
+    display: block;
+}
+.ric1{
+    color: blue;
+}
+h5
+{
+    font-style: bold;
+    color: white;
+}
+#radio{
+color: white;
+}
