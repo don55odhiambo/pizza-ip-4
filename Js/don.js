@@ -1,94 +1,55 @@
-function myOrder(crust,size,number,toppings){
-    this.pizzaCrust=crust;
-    this.pizzaSize=size;
-    this.Number=number;
-    this.Toppings=toppings;
-}
-myOrder.prototype.fullOrder= function(){
-    return "You've  ordered "+this.Number+" "+this.pizzaSize+" "+this.pizzaCrust + " with " + this.Toppings;
-}
-
-$(document).ready(function(){
-    $("#submit").click(function(event){
-        event.preventDefault();
-        var pizzaCrust =$("select#don1").val();
-        var pizzaSize = $("select#don2").val();
-        var Numbers = $("input#mac1").val();
-        var Toppings = $("select#quatro").val();
-        if((pizzaCrust==='Detroit')&&(pizzaSize==='large')){
-            newPrice=750;
-            var newTotal= newPrice*Numbers;
-        }else if((pizzaCrust==='Detroit')&&(pizzaSize==='medium')){
-            newPrice=900;
-            var newTotal= newPrice*Numbers;
-        }else if((pizzaCrust==='Detroit')&&(pizzaSize==='small')){
-            newPrice=1000;
-             var newTotal= newPrice*Numbers;
-        }else if((pizzaCrust==='New York-Style Pizza')&&(pizzaSize==='large')){
-            newPrice=500;
-            var newTotal= newPrice*Numbers;
-        }else if((pizzaCrust==='New York-Style Pizza')&&(pizzaSize==='medium')){
-            newPrice=1000;
-            var newTotal= newPrice*Numbers;
-        }else if((pizzaCrust==='New York-Style Pizza')&&(pizzaSize==='small')){
-            newPrice=1500;
-            var newTotal= newPrice*Numbers;
-        }else if((pizzaCrust==='St. Louis Pizza')&&(pizzaSize==='large')){
-            newPrice=450;
-            var newTotal= newPrice*Numbers;
-        }else if((pizzaCrust==='St. Louis Pizza')&&(pizzaSize==='medium')){
-            newPrice=900;
-            var newTotal= newPrice*Numbers;
-        }else if((pizzaCrust==='St. Louis Pizza')&&(pizzaSize==='small')){
-            newPrice=1350;
-            var newTotal= newPrice*Numbers;
-        }else if((pizzaCrust==='Stuffed')&&(pizzaSize==='large')){
-            newPrice=700;
-            var newTotal= newPrice*Numbers;
-        }else if((pizzaCrust==='Stuffed')&&(pizzaSize==='medium')){
-            newPrice=1400;
-            var newTotal= newPrice*Numbers;
-        }else if((pizzaCrust==='Stuffed')&&(pizzaSize==='small')){
-            newPrice=2100;
-            var newTotal= newPrice*Numbers;
-        }else if((pizzaCrust==='Deep Dish Pizza')&&(pizzaSize==='large')){
-            newPrice=800;
-            var newTotal= newPrice*Numbers;
-        }else if((pizzaCrust==='Deep Dish Pizza')&&(pizzaSize==='Medium')){
-            newPrice=1600;
-            var newTotal= newPrice*Numbers;
-        }else if((pizzaCrust==='Deep Dish Pizza')&&(pizzaSize==='small')){
-            newPrice=2400;
-            var newTotal= newPrice*Numbers;
-        }else if((pizzaCrust==='Sicilian Pizza')&&(pizzaSize==='large')){
-            newPrice=600;
-            var newTotal= newPrice*Numbers;
-        }else if((pizzaCrust==='Sicilian Pizza')&&(pizzaSize==='Medium')){
-            newPrice=1200;
-            var newTotal= newPrice*Numbers;
-        }else if((pizzaCrust==='Sicilian Pizza')&&(pizzaSize==='small')){
-            newPrice=1800;
-            var newTotal= newPrice*Numbers;
-        }else{
-            alert("Input not found!! please try again.")
-        }
-
-        var fullPizza = new myOrder (pizzaCrust,pizzaSize,Numbers,Toppings);
-
-        $("div#cinco").append("<p>" + fullPizza.fullOrder() + "</p>");
-        $("div#cinco").append("<p>"+"You will pay " + newTotal + "</p>");
-        
+function Pizza(size, crust, toppings, total, orderNo) {
+    this.size = size;
+    this.crust = crust;
+    this.toppings = toppings;
+    this.total = total;
+    this.orderNo = orderNo;
+  }
+  $(document).ready(function(){
+    $("table").hide();
+      var sizeOfPizza = $(".size option:selected").val();
+      var crustOfPizza = $(".crust option:selected").val();
+      var toppingsOfPizza = $(".toppings option:selected").val();
+      var total = parseInt(sizeOfPizza) + parseInt(crustOfPizza) + parseInt(toppingsOfPizza);
+      var order = 0;
+      var grandTotal = 0;
+      $("don1").hide();
+      $("don1").hide();
+      $(".location").hide();
+      $('button#the-order').click(function() {
+      $("button#the-order").show();
+      $("table").show();
+      $("button#the-order").hide();
+      $("#size").html($(".size option:selected").text() + " - " + sizeOfPizza);
+      $("#crust").html($(".crust option:selected").text() + " - " + crustOfPizza);
+      $("#toppings").html($(".toppings option:selected").text() + " - " + toppingsOfPizza);
+      $("#total").html(total);
+      $("button#add-pizza").show();
+      $("button#complete").show();
     });
-    $("#view").click(function(){
-        if($('#delivery1:checked').val()){
-            var place =prompt('please enter your location for pizza delivery')
-            if(place!==null){
-                alert(' Delivery fee is 150 ,your pizza will be delivered to' +'  ' +  place + '.' + ' Thank you.')
-            }else{
-                alert('please input a valid location ')
-            }
-            
-        }  
+    $('button#add-pizza').click(function() {
+        var sizeOfPizza = $(".size option:selected").val();
+        var crustOfPizza = $(".crust option:selected").val();
+        var toppingsOfPizza = $(".toppings option:selected").val();
+        var total = parseInt(sizeOfPizza) + parseInt(crustOfPizza) + parseInt(toppingsOfPizza);
+        order = order + 1;
+        var newPizza = new Pizza(sizeOfPizza, crustOfPizza, toppingsOfPizza, total, order);
+        grandTotal+=newPizza.total;
+        var newRow = '<tr><th scope="row">' + newPizza.orderNo + '</th><td id="size">' + $(".size option:selected").text() + " - " + newPizza.size + '</td><td id="crust">' + $(".crust option:selected").text() + " - " + newPizza.crust + '</td><td id="toppings">' + $(".toppings option:selected").text() + " - " + newPizza.toppings + '</td><td id="total">' + newPizza.total + '</td></tr>'
+        $("#pizza:last").append(newRow);
+      });
+      $("button#complete").click(function(){
+        $(".text").show();
+        $("button#complete").hide();
+      });
+      $("button#yes").click(function(){
+        $(".text").hide();
+        $(".location").show();
+      });
+      $("button#submit").click(function(){
+        $(".location").hide();
+        var location = $("input#locale").val();
+        $(".response").text("Your pizza will be delivered to "+location);
+        $(".add-info").show().text("The total is:"+grandTotal);
+      });
     });
-        
-});

@@ -11,104 +11,54 @@
     
 </head>
 <body>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
+    <div class="container-fluid">
+        <div class="jumbotron">
+            
     <h1>WELCOME TO DON'S PIZZA PALACE</h1>
     <div class="ric1">
     <p>The best pizza you can get at an affordable price.You are all welcomed.<br>Monday-Saturday<br>Openning Hours 8:30am-10:00pm </p>
     </div>
-    <h2>pizza crust categories</h2>
-    <div class="mia1">
-    <p>Thick crust</p>
-    <ul>
-        <li>st.louis pizza</li>
-        <li>Detroit pizza</li>
-        <li>Greek pizza</li>
-    </ul>
-    </div>
-    <div class="mia2">
-    <p>Thin crust</p>
-    <ul>
-        <li>Naepolitan pizza</li>
-        <li>Kenyan pizza</li>
-        <li>New York style pizza</li>
-    </ul>
-    </div>
-    <h3>The Toppings</h3>
-    <div class="mia3">
-    <p>vegeterian</p>
-    <ul>
-        <li>pepperoni</li>
-        <li>green peppers</li>
-        <li>onions</li>
-        <Li>cheese</Li>
-    </ul>
-    </div>
-    <div class="mia4">
-    <p>non vegeterians</p>
-    <ul>
-        <li>sausage</li>
-        <li>bacon</li>
-        <li>black olives</li>
-        <li>mushrooms</li>
-    </ul>
-    </div>
-    <h4>kindly fill the form so as to aquire your order successfully</h4>
-    <div class="jumbotron">
-        <div class="row">
-    
-        </div>
-        <div class="col-md-6">
-            <form action="inputs">
-                <div class="mia5">
-    <p>click and scroll down for pizza crust</p>
-    </div>
-</div>
-     <div class="jumbotron">
-       <div class="col-md-6">
-           <select id="don1">
-    
-             <option value="1200">st.louis pizza</option>
-             <option value="750">Detroit pizza</option>
-             <option value="930">Greek pizza</option>
-             <option value="1000">Naepolitan pizza</option>
-             <option value="800">Kenyan pizza</option>
-             <option value="1390">Newyork style pizza</option>
-    
-           </select>
-    
-        </div>
-    </div>
-    <div class="mia6">
-    <p>pizza according to sizes</p>
-    </div>
-    <select id="don2">
+ 
 
-    <option value="large">large</option>
-    <option value="medium">medium</option>
-    <option value="small">small</option>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="col-md-6">
+    <h3 class="one">Pizza</h3>
+    <select id="don1">
+
+    <option label="large" value="1200">large</option>
+    <option label="medium" value="930">medium</option>
+    <option label="small" value="750">small</option>
     
     </select>
-     
-    <div class="mia7">
-    <p>No.of pizza's</p>
+            </div>
+    
+    <div class="col-md-6">
+           
+       <h2 class="two">crust</h2>
+        <select id="don2">
+        <option label="crispy" value="200">cheese</option>
+        <option label="stuffed" value="150">onions</option>
+        <option label="gluten free" value="100">mushrooms</option>
+        </select> 
+        </div>
+        
+       
+    
+    </div> 
+    <div class="col-md-6">
+
+        <h3 class="three">Toppings</h3>
+        <select id="don3">
+        <option label="cheese" value="200">cheese</option>
+        <option label="onions" value="150">onions</option>
+        <option label="mushrooms" value="100">mushrooms</option>
+        </select>   
+        <br>
     </div>
     <br>
-    <input type="text" id="mac1" placeholder="number">
-    <div class="cbr1">
-    <p>Toppings</p>
-    </div>
-
-
-    <select id="don3">
-    <option value="vegeterian">vegeterian</option>
-    <option value="non vegeterians">non vegeterians</option>
-    </select>   
-    <br>
-    <br>
-    <button type="submit" id="submit">order here</button>
      </form>
+     </div>
 
      <h5>Do you want your pizza to be delivered at your location</h5>
 <div id="radio">
@@ -118,12 +68,66 @@
      </form>
     </div>
     <br>
-    <button type="button" onclick="alert('your order will be delivered to your location!')">submit</button>
+    <button type="button" onclick="return myOrder ()">Delivery submit</button>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">order no.</th>
+                <th scope="col">Pizza size.</th>
+                <th scope="col">crust.</th>
+                <th scope="col">Toppings.</th>
+                <th scope="col">total.</th>
+            </tr>
+        </thead>
+        <tbody id="pizza">
+            <tr>
+                <th scope="row"></th>
+                <td id="size"></td>
+                <td id="toppings"></td>
+                <td id="crust"></td>
+                <td id="total"></td>
+            </tr>
 
+        </tbody>
+    </table>
+            <div class="order">
+                    <button type="button"class="btn bg-primary" id="the-order">Order</button>
+                </div>
+                    <div class="">
+                        <button class="btn btn-info" id="add-pizza" type="button">Add Another</button>
+                    </div>
+                        <div class="delivery">
+                            <h3 id="total1">The total is: <span></span></h3>
+                        </div>
+                        <div class="text">
+                            <h5>Would you like it delivered? For an extra charge of <em>200</em></h5>
+                            <button type="button" class="btn bg-primary" id="yes">Yes</button>
+                            <button class="btn bg-primary" id="no" type="button">No</button>
+                        </div>
+                        <div class="location">
+                            <p>Please enter location</p>
+                            <input type="text" placeholder="location" id="locale" required>
+                            <button type="button" id="submit" class="btn bg-primary">Submit</button>
+                        </div>
+                        <div class="complete-order">
+                            <button class="btn btn-info" id="complete" type="button">Complete</button>
+                        </div>
+                        <div class="response">
+                        </div>
+                        <div class="add-info">
+                            </div>
+                 <div class="text-center">
+                        <h4>Thank You! Your order has been received </h4>
+                </div> 
+        
+        
+    
+    </div>
+    </div>
     <script src="Js/jquery.js"></script>
     <script src="Js/script.js"></script>
   
-      <script src="javascript" integrity="script.js" crossorigin="anonymous"></script>
+      <script src="/Js/don.js"></script>
       <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   
 

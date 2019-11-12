@@ -29,42 +29,7 @@ h4
 {
     text-align: center;
     color: springgreen;
-}
-li
-{
-    text-align: center;
-    color: ivory;
-    list-style-type: lower-roman;
-    place-items: center;
-    list-style: none;
-}
-.mia1{
-    color: red;
-    text-align: center;
-}
-.mia2{
-    color:darkblue;
-    text-align: center;
-}
-.mia3{
-    text-align: center;
-    color: red
-}
-.mia4{
-    text-align: center;
-    color: black
-}
-.mia5{
-    text-align: center;
-    color: red;
-}
-.mia6{
-    text-align: center;
-    color: brown;
-}
-.mia7{
-    text-align: center;
-    color: orangered;
+
 }
 .cbr1{
     text-align: center;
@@ -85,4 +50,13 @@ h5
 }
 #radio{
 color: white;
+}
+.table{
+    text-align: center;
+    padding: 100uv;
+    margin-left: 39%;
+    color: white;
+}
+.location{
+    color: white;
 }
