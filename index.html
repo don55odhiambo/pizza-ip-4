@@ -1,135 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>pizza  mania</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>pizza  mania</title>
+	<link rel="stylesheet" href="script.css">
+	<script>
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+  <script src="Js/don.js"></script>
+	<link rel="stylesheet" href="style.css">
 
-    
+	
 </head>
 <body>
-    <div class="container-fluid">
-        <div class="jumbotron">
-            
-    <h1>WELCOME TO DON'S PIZZA PALACE</h1>
-    <div class="ric1">
-    <p>The best pizza you can get at an affordable price.You are all welcomed.<br>Monday-Saturday<br>Openning Hours 8:30am-10:00pm </p>
-    </div>
+	<div class="container-fluid">
+		<div class="jumbotron">
+			
+	<h1>WELCOME TO DON'S PIZZA PALACE</h1>
+	<div class="ric1">
+	<p>The best pizza you can get at an affordable price.You are all welcomed.<br>Monday-Saturday<br>Openning Hours 8:30am-10:00pm </p>
+	</div>
  
 
-    <div class="row">
-        <div class="col-md-6">
-            <div class="col-md-6">
-    <h3 class="one">Pizza</h3>
-    <select id="don1">
+	<div class="row">
+		<div class="col-md-6">
+			<div class="col-md-6">
+	<h3 class="one">Pizza size</h3>
+	<select id="don1">
 
-    <option label="large" value="1200">large</option>
-    <option label="medium" value="930">medium</option>
-    <option label="small" value="750">small</option>
-    
-    </select>
-            </div>
-    
-    <div class="col-md-6">
-           
-       <h2 class="two">crust</h2>
-        <select id="don2">
-        <option label="crispy" value="200">cheese</option>
-        <option label="stuffed" value="150">onions</option>
-        <option label="gluten free" value="100">mushrooms</option>
-        </select> 
-        </div>
-        
-       
-    
-    </div> 
-    <div class="col-md-6">
+	<option label="large" value="1200">large</option>
+	<option label="medium" value="930">medium</option>
+	<option label="small" value="750">small</option>
+	
+	</select>
+			</div>
+	
+	<div class="col-md-6">
+		   
+	   <h2 class="two">crust</h2>
+		<select id="don2">
+		<option label="crispy" value="200">cheese</option>
+		<option label="stuffed" value="150">onions</option>
+		<option label="gluten free" value="100">mushrooms</option>
+		</select> 
+		</div>
+		
+	   
+	
+	</div> 
+	<div class="col-md-6">
 
-        <h3 class="three">Toppings</h3>
-        <select id="don3">
-        <option label="cheese" value="200">cheese</option>
-        <option label="onions" value="150">onions</option>
-        <option label="mushrooms" value="100">mushrooms</option>
-        </select>   
-        <br>
-    </div>
-    <br>
-     </form>
-     </div>
+		<h3 class="three">Toppings</h3>
+		<select id="don3">
+		<option label="cheese" value="200">cheese</option>
+		<option label="onions" value="150">onions</option>
+		<option label="mushrooms" value="100">mushrooms</option>
+		</select>   
+		<br>
+	</div>
+	<br>
+	 </form>
+	 </div>
 
-     <h5>Do you want your pizza to be delivered at your location</h5>
+	 <h5>Do you want your pizza to be delivered at your location</h5>
 <div id="radio">
-     <form>
-         <input type="radio" name="delivery" value="yes" checked>yes<br>
-         <input type="radio" name="delivery" value="no">no
-     </form>
-    </div>
-    <br>
-    <button type="button" onclick="return myOrder ()">Delivery submit</button>
-    <table class="table">
-        <thead>
-            <tr>
-                <th scope="col">order no.</th>
-                <th scope="col">Pizza size.</th>
-                <th scope="col">crust.</th>
-                <th scope="col">Toppings.</th>
-                <th scope="col">total.</th>
-            </tr>
-        </thead>
-        <tbody id="pizza">
-            <tr>
-                <th scope="row"></th>
-                <td id="size"></td>
-                <td id="toppings"></td>
-                <td id="crust"></td>
-                <td id="total"></td>
-            </tr>
+	 <form>
+		 <input type="radio" name="delivery" value="yes" checked>yes<br>
+		 <input type="radio" name="delivery" value="no">no
+	 </form>
+	</div>
+	<br>
+	<button type="button">Delivery submit</button>
+	<table class="table">
+		<thead>
+			<tr>
+				<th scope="col">order no.</th>
+				<th scope="col">Pizza size.</th>
+				<th scope="col">crust.</th>
+				<th scope="col">Toppings.</th>
+				<th scope="col">total.</th>
+			</tr>
+		</thead>
+		<tbody id="pizza">
+			<tr>
+				<th scope="row"></th>
+				<td id="size"></td>
+				<td id="toppings"></td>
+				<td id="crust"></td>
+				<td id="total"></td>
+			</tr>
 
-        </tbody>
-    </table>
-            <div class="order">
-                    <button type="button"class="btn bg-primary" id="the-order">Order</button>
-                </div>
-                    <div class="">
-                        <button class="btn btn-info" id="add-pizza" type="button">Add Another</button>
-                    </div>
-                        <div class="delivery">
-                            <h3 id="total1">The total is: <span></span></h3>
-                        </div>
-                        <div class="text">
-                            <h5>Would you like it delivered? For an extra charge of <em>200</em></h5>
-                            <button type="button" class="btn bg-primary" id="yes">Yes</button>
-                            <button class="btn bg-primary" id="no" type="button">No</button>
-                        </div>
-                        <div class="location">
-                            <p>Please enter location</p>
-                            <input type="text" placeholder="location" id="locale" required>
-                            <button type="button" id="submit" class="btn bg-primary">Submit</button>
-                        </div>
-                        <div class="complete-order">
-                            <button class="btn btn-info" id="complete" type="button">Complete</button>
-                        </div>
-                        <div class="response">
-                        </div>
-                        <div class="add-info">
-                            </div>
-                 <div class="text-center">
-                        <h4>Thank You! Your order has been received </h4>
-                </div> 
-        
-        
-    
-    </div>
-    </div>
-    <script src="Js/jquery.js"></script>
-    <script src="Js/script.js"></script>
-  
-      <script src="/Js/don.js"></script>
-      <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-  
+		</tbody>
+	</table>
+			<div class="order">
+					<button type="button"class="btn bg-primary" id="the-order">Order</button>
+				</div>
+					<div class="">
+						<button class="btn btn-info" id="add-pizza" type="button">Add Another</button>
+					</div>
+						<div class="delivery">
+							<h3 id="total1">The total is: <span></span></h3>
+						</div>
+						<div class="text">
+							<h5>Would you like it delivered? For an extra charge of <em>200</em></h5>
+							<button type="button" class="btn bg-primary" id="yes">Yes</button>
+							<button class="btn bg-primary" id="no" type="button">No</button>
+						</div>
+						<div class="location">
+							<p>Please enter location</p>
+							<input type="text" placeholder="location" id="locale" required>
+							<button type="button" id="submit" class="btn bg-primary">Submit</button>
+						</div>
+						<div class="complete-order">
+							<button class="btn btn-info" id="complete" type="button">Complete</button>
+						</div>
+						<div class="response">
+						</div>
+						<div class="add-info">
+							</div>
+				 <div class="text-center">
+						<h4>Thank You! Your order has been received </h4>
+				</div> 
+		
+		
+	
+	</div>
+	</div>
+	<script src="Js/jquery.js"></script>
+
 
 </body>
 </html>

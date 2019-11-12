@@ -22,13 +22,14 @@ function Pizza(size, crust, toppings, total, orderNo) {
       $("button#the-order").show();
       $("table").show();
       $("button#the-order").hide();
-      $("#size").html($(".size option:selected").text() + " - " + sizeOfPizza);
-      $("#crust").html($(".crust option:selected").text() + " - " + crustOfPizza);
-      $("#toppings").html($(".toppings option:selected").text() + " - " + toppingsOfPizza);
+      $("#don1").html($(".size option:selected").text() + "  " + sizeOfPizza);
+      // $("don2").html($(".crust option:selected").text() + "  " + crustOfPizza);
+      $("don3").html($(".toppings option:selected").text() + "  " + toppingsOfPizza);
       $("#total").html(total);
       $("button#add-pizza").show();
       $("button#complete").show();
     });
+
     $('button#add-pizza').click(function() {
         var sizeOfPizza = $(".size option:selected").val();
         var crustOfPizza = $(".crust option:selected").val();
