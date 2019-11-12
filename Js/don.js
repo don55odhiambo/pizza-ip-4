@@ -13,9 +13,11 @@ function Pizza(size, crust, toppings, total, orderNo) {
       var total = parseInt(sizeOfPizza) + parseInt(crustOfPizza) + parseInt(toppingsOfPizza);
       var order = 0;
       var grandTotal = 0;
-      $("don1").hide();
-      $("don1").hide();
+      
+      $("button#add-pizza").hide();
+      $("button#complete").hide();
       $(".location").hide();
+  
       $('button#the-order').click(function() {
       $("button#the-order").show();
       $("table").show();
